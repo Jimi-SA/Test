@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <script src="https://kit.fontawesome.com/9e0694c1ee.js" crossorigin="anonymous"></script>
+
+    <title>Bootstrap Landing Page</title>
+    <style>
+        /* Customize the styles here */
+        body {
+        
+            background: url('/asset/bk.jpg');
+            background-size: 100% 130%;
+            background-repeat: no-repeat;
+        }
+
+        .hero-section {
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .hero-text {
+            color: white;
+        }
+
+        .animated-circle {
+            width: 450px;
+            height: 450px;
+            background-color: white;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+            margin-top: -30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .swiper-container {
+            width:80%;
+            height: 130%;
+           overflow: hidden;
+           position: absolute;
+           top: -8%;
+           right:5%;
+        }
+
+        .swiper-slide img {
+            width: 100%;
+            height: 100%;
+           
+        
+        }
+        .hero-text{
+            font-weight: bolder;
+        }
+        /* .circle-frame {
+            width: 100%;
+            height: 100%;
+            border: 15px solid white;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        } */
+        .text-link{
+            font-size: 18px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .animated-circle {
+                width: 250px;
+                height: 250px;
+                margin-top: 15px;
+            }
+
+            .hero-section {
+                padding: 40px 0;
+            }
+            .logo-link{
+                width: 50px !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar outside of Hero Section -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <!-- Logo on the left -->
+            <a class="navbar-brand logo-link" href="#">
+                <img src="/asset/logo.svg" alt="Logo">
+               
+            </a>
+
+            <!-- Toggle button for small screens -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Links at the center -->
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active text-link">
+                        <a class="nav-link " href="#">Home</a>
+                    </li>
+                    <li class="nav-item text-link">
+                        <a class="nav-link" href="#">Registration</a>
+                    </li>
+                    <li class="nav-item text-link">
+                        <a class="nav-link" href="#">Book Ticket</a>
+                    </li>
+                    <li class="nav-item text-link">
+                        <a class="nav-link" href="#">Sponsporship</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row">
+                <!-- Left Side -->
+                <div class="col-md-6">
+                    <h1 class="display-4 hero-text">BIG STAR  <br>X<span>TALENT  SHOW</span></h1>
+                    <p class="lead hero-text">A brief description of your awesome product or service.</p>
+                    <p class="hero-text">Another paragraph of information about your product or service.</p>
+                    <a href="#" class="btn btn-primary btn-lg btn-long">Book Ticket</a>
+                    <div class="social-icons mt-3">
+                        <a href="#" target="_blank" class="btn btn-outline-primary btn-lg"><i
+                                class="fab fa-facebook"></i></a>
+                        <a href="#" target="_blank" class="btn btn-outline-primary btn-lg"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank" class="btn btn-outline-primary btn-lg"><i
+                                class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <!-- Right Side - Animated Circle with Swiper.js Slider -->
+                <div class="col-md-6">
+                    <div class="animated-circle mx-auto">
+                        <div class="circle-frame"></div>
+                    </div>
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="/asset/image_1.png" alt="Image 1">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="/asset/image_2.png" alt="Image 2">
+                                </div>
+                                <!-- Add more swiper slides as needed -->
+                            </div>
+                            <!-- Add Pagination -->
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <!-- Swiper.js Initialization with Autoplay -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            autoplay: {
+                delay: 5000, // Time in milliseconds between slides
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+    </script>
+
+</body>
+
+</html>
